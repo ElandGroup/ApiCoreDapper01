@@ -23,6 +23,8 @@ namespace HelloApiWithCoreDapper.Controllers
         public async Task<IActionResult> Get()
         {
             var fruitDtoList = await _fruitService.FruitQuery();
+            if (fruitDtoList == null)
+                return NoContent();
             return Ok(fruitDtoList);
         }
 
@@ -31,6 +33,8 @@ namespace HelloApiWithCoreDapper.Controllers
         public async Task<IActionResult> Get(string name)
         {
             var fruitDtoList = await _fruitService.FruitQuery(name);
+            if (fruitDtoList == null)
+                return NoContent();
             return  Ok(fruitDtoList);
         }
 
@@ -70,7 +74,7 @@ namespace HelloApiWithCoreDapper.Controllers
                 var fruit = _fruitService.FruitQuery(name);
                 if (fruit == null)
                 {
-                    return NotFound(); 
+                    return NoContent();
                 }
 
                 _fruitService.FruitUpdate(fruitDto);
