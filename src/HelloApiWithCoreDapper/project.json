@@ -15,8 +15,7 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
     "System.Data.SqlClient": "4.1.0",
-    "Dapper": "1.50.2",
-    "System.Runtime.Serialization.Formatters": "4.0.0-rc4-24214-01"
+    "Dapper": "1.50.2"
   },
 
   "tools": {

@@ -17,7 +17,7 @@ namespace HelloApiWithCoreDapper.Common.HttpPack
             {
                 success = true,
                 result = result,
-                errorDto = null
+                error = null
             });
         }
         public static ObjectResult NoContentEx(this Controller context)
@@ -27,7 +27,7 @@ namespace HelloApiWithCoreDapper.Common.HttpPack
                 {
                     success = true,
                     result = null,
-                    errorDto = null
+                    error = null
                 });
         }
         public static ObjectResult NotFoundEx(this Controller context)
@@ -37,7 +37,7 @@ namespace HelloApiWithCoreDapper.Common.HttpPack
                 {
                     success = true,
                     result = null,
-                    errorDto = null
+                    error = null
                 });
         }
         public static BadRequestObjectResult BadRequestEx(this Controller context, string message)
@@ -46,7 +46,7 @@ namespace HelloApiWithCoreDapper.Common.HttpPack
             {
                 success = false,
                 result = null,
-                errorDto = new ErrorDto
+                error = new ErrorDto
                 {
                     code = 1,
                     message = "A required parameter is missing or doesn't have the right format:" + message,
@@ -62,7 +62,7 @@ namespace HelloApiWithCoreDapper.Common.HttpPack
                 {
                     success = false,
                     result = null,
-                    errorDto = new ErrorDto
+                    error = new ErrorDto
                     {
                         code = 2,
                         message = errorMessage,
@@ -82,7 +82,7 @@ namespace HelloApiWithCoreDapper.Common.HttpPack
             {
                 success = false,
                 result = null,
-                errorDto = errorDto
+                error = errorDto
             });
         }
         public static ObjectResult ErrorEx(this Controller context, ErrorDto errorDto)
@@ -92,7 +92,7 @@ namespace HelloApiWithCoreDapper.Common.HttpPack
                 {
                     success = false,
                     result = null,
-                    errorDto = errorDto
+                    error = errorDto
                 });
         }
 

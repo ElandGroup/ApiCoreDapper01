@@ -12,7 +12,7 @@ using HelloApiWithCoreDapper.Common.HttpPack;
 
 namespace HelloApiWithCoreDapper.Controllers
 {
-    [Route("api/v2/[controller]")]
+    [Route("api/v1/[controller]")]
     public class NewFruitController : Controller
     {
         IFruitService _fruitService;

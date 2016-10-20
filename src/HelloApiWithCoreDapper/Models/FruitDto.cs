@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 
 namespace HelloApiWithCoreDapper.Models
 {
-    [Serializable]
     public class FruitDto
     {
         public string Name { get; set; }

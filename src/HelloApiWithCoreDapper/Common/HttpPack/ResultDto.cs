@@ -9,6 +9,6 @@ namespace HelloApiWithCoreDapper.Common.HttpPack
     {
         public bool success { get; set; }
         public object result { get; set; }
-        public ErrorDto errorDto { get; set; }     
+        public ErrorDto error { get; set; }     
     }
 }
